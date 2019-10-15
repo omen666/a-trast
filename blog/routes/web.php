@@ -12,4 +12,7 @@
 */
 
 Route::get('api/v1/task', 'TaskController@index')->name('taskIndex');
-Route::get('api/v1/task/{id}', 'TaskController@ident')->name('taskIdent')->where('id', '[0-9]+');;
+Route::get('api/v1/task/{id}', 'TaskController@ident')->name('taskIdent')->where('id', '[0-9]+');
+Route::get('/', 'TaskController@main')->name('taskMain');
+Route::post('/', 'TaskController@main')->name('taskMain');
+Route::post('/getTask', 'TaskController@getTask')->name('getTask');
