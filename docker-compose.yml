@@ -1,0 +1,20 @@
+version: '3'
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx_trast
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/core:/etc/nginx/conf.d
+      - ./:/var/www/html
+      - ./nginx/Logs:/var/log/nginx/
+      - ./:/usr/share/nginx/html/
+    links:
+      - php
+
+  php:
+    build: ./php
+    container_name: php_trast
+    volumes:
+      - ./:/var/www/html
