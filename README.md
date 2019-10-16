@@ -1,11 +1,11 @@
 # a-trast
 
-После того как контенеры будут созданы нужно зайти в контейнер docker exec -it php_trast bash 
-Выполнить команды:
-cd /var/www/html/blog 
-composer update
-cp .env.example .env
-php artisan key:generate
+После того как контенеры будут созданы нужно зайти в контейнер docker exec -it php_trast bash <br/>
+Выполнить команды:<br/>
+cd /var/www/html/blog <br/>
+composer update<br/>
+cp .env.example .env<br/>
+php artisan key:generate<br/>
 
 Приложение должно стать доступно по адрессу http://localhost:8080/
 
